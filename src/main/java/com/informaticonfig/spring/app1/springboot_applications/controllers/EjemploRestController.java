@@ -1,0 +1,27 @@
+package com.informaticonfig.spring.app1.springboot_applications.controllers;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.informaticonfig.spring.app1.springboot_applications.models.Empleados;
+import com.informaticonfig.spring.app1.springboot_applications.models.dto.ClaseDTO;
+
+@RestController
+@RequestMapping("/api")
+public class EjemploRestController {
+
+    @RequestMapping(path = "/detalles_info2", method = RequestMethod.GET)
+    public ClaseDTO detalles_info2() {
+
+        ClaseDTO usuario1 = new ClaseDTO();
+
+        usuario1.setTitulo("Administrador");
+        usuario1.setUsuario("Informaticonfig");
+
+        return usuario1;
+    }
+}
